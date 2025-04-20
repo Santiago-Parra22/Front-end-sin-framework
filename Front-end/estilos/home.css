@@ -1,0 +1,794 @@
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes FadeInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+@keyframes FadeInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* ----------- Reset básico ----------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ----------- Navegación ----------- */
+.primer_menu, .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.menu a:hover {
+    color: #4CAF50;
+}
+
+/* ----------- Barra de Búsqueda ----------- */
+.barra_de_busqueda {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.barra_de_busqueda input[type="text"] {
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+    width: 300px;
+}
+
+.barra_de_busqueda button {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.barra_de_busqueda button:hover {
+    background-color: #45a049;
+}
+
+/* ----------- Contacto ----------- */
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.icono-texto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icono-texto img {
+    width: 50px;
+    height: 50px;
+}
+
+.contacto h2 {
+    margin: 10px 0 0 0;
+    color: #333;
+}
+
+/* ----------- Sección Inicio ----------- */
+#inicio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ----------- Primer Div (principal) ----------- */
+.primer_div {
+    position: relative;
+    flex: 2;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 603px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow:  1px 1px 2px black,
+    0 0 1em white,
+    0 0 0.2em white;
+    animation: fadeInUp 2s ease forwards ;
+}
+
+.primer_div::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://plus.unsplash.com/premium_photo-1661407773567-971166f86cc9?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.primer_div:hover::before {
+    transform: scale(1.1);
+    opacity: 1;
+    
+}
+
+/* ----------- Títulos ----------- */
+.Titulo {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 2s ease forwards ;
+    animation-delay: 0.1s;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 2s ease forwards ;
+    animation-delay: 0.2s;
+}
+
+/* ----------- Botón de acción ----------- */
+.accion {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 2s ease forwards ;
+    animation-delay: 0.3s;
+}
+
+.accion:hover {
+    background-color: white;
+    color: orange;
+}
+
+/* ----------- Categorías ----------- */
+.categorias {
+    flex: 1;
+    position: relative;
+    height: 603px;
+    border-radius: 10px;
+    color: black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    animation: FadeInRight 2s ease forwards;
+}
+.categorias_text{
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    text-shadow:  1px 1px 2px black,
+    0 0 1em white,
+    0 0 0.2em white;
+    animation: fadeInRight 1s ease forwards ;
+    animation-delay: 0.1s;
+}
+.categorias_subtitle{
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    text-shadow:  1px 1px 2px black,
+    0 0 1em white,
+    0 0 0.2em white;
+    animation: fadeInRight 2s ease forwards ;
+    animation-delay: 0.3s;
+}
+.Accion-categoria{
+    opacity: 0;
+    transform: translateY(20px);
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.categorias::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://colombia.bioweb.co/cdn/shop/products/40e881330a7e92a0bc3f437616ccdc5b.webp?v=1676911569");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    border-radius: 10px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: -1;
+}
+
+.categorias:hover::before  {
+    transform: scale(1.1);
+    opacity: 1;
+}
+.categorias:hover .Accion-categoria{
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 1;
+}
+
+.seccion2{
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.bienvenida{
+    flex: 1;
+    position: relative;
+    height: 603px;
+    border-radius: 10px;
+    color: black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    animation: FadeInLeft 2s ease forwards ;
+}
+
+.bienvenida_text{
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow:  1px 1px 2px black,
+    0 0 1em white,
+    0 0 0.2em white;
+    animation: FadeInLeft 1s ease forwards ;
+    animation-delay: 0.1s;
+}
+.bienvenida_subtitle{
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    text-shadow:  1px 1px 2px black,
+    0 0 1em white,
+    0 0 0.2em white;
+    animation: FadeInLeft 2s ease forwards ;
+    animation-delay: 0.1s;
+}
+.enlace{
+    color: white;
+}
+.enlace:hover{
+    color: orange   ;
+}
+
+.bienvenida::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://www.elcarrocolombiano.com/wp-content/uploads/2022/08/20220823-20-CARROS-PREMIUM-DE-LUJO-ALTA-GAMA-MAS-VENDIDOS-EN-COLOMBIA-JULIO-2022-01.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    border-radius: 10px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: -1;
+}
+
+.bienvenida:hover::before  {
+    transform: scale(1.1);
+    opacity: 1;
+}
+.Inicio {
+    flex: 1;
+    position: relative;
+    height: 603px;
+    border-radius: 10px;
+    color: black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    animation: FadeInRight 2s ease forwards;
+}
+.Inicio_text{
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    text-shadow:  1px 1px 2px black,
+    0 0 1em white,
+    0 0 0.2em white;
+    animation: fadeInRight 1s ease forwards ;
+    animation-delay: 0.1s;
+}
+.Inicio_subtitle{
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    animation: fadeInRight 2s ease forwards ;
+    animation-delay: 0.3s;
+    text-shadow:  1px 1px 2px black,
+    0 0 1em white,
+    0 0 0.2em white;
+}
+.read{
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.read:hover{
+    color: orange;
+    background-color: white;
+}
+.Inicio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToD3rKMNipXZ8X2gnyeuevQY3Ik6JApvJAmw&s");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    border-radius: 10px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: -1;
+}
+
+.Inicio:hover::before  {
+    transform: scale(1.1);
+    opacity: 1;
+}
+.banner{
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    margin: 30px;
+    padding: 0px;
+    justify-content: space-between;
+    width: 100%;
+}
+.baner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1px;
+}
+.svg{
+    margin-right: 3px;
+}
+.banner_2{
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+h3{
+    justify-content: center;
+    text-align: center;
+}
+/*slider principal*/
+.Categorias{
+        width: 100%;
+        min-height: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.slide {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+    width: 100%;
+}
+.slide-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    height: calc( 750px + 3em);
+}
+.slide-open:checked + .slide-item {
+    position: static;
+    opacity: 100;
+}
+.slide-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+.slide-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+.slide-control.prev {
+    left: 2%;
+}
+.slide-control.next {
+    right: 2%;
+}
+.slide-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3 {
+    display: block;
+}
+.slide-indicador {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+.slide-indicador li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.slide-circulo {
+    color: #828282;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+.slide-circulo:hover {
+    color: #aaaaaa;
+}
+#slide-1:checked ~ .control-1 ~ .slide-indicador 
+     li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador 
+      li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador 
+      li:nth-child(3) .slide-circulo {
+    color: #428bca;
+}
+#titulo {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+         -1px 0px 2px rgba(255, 255, 255, 0);
+}
+.ventajas {
+    margin: 3px;
+    padding: 10px 10px 10px 0px;
+    text-align: center;
+}
+
+.vent {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px; /* Espacio entre ventajas */
+    margin-top: 10px;    
+}
+
+.ventaja {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.ventaja svg {
+    margin: 5px;
+}
+
+.ventaja span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.brand{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%; /* Espacio entre ventajas */
+}
+.marca{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+}
+.lenovo img{
+    width: 400px;
+    height: 150px;
+    opacity: 0.5;
+}
+.lenovo:hover img{
+    opacity: 1 ;
+}
+.msi img{
+    width: 350px;
+    height: 150px;
+    opacity: 0.5;
+}
+.msi:hover img{
+    opacity: 1 ;
+}
+.dell img{
+    width: 400px;
+    height: 150px;
+    opacity: 0.5;
+}
+.dell:hover img{
+    opacity: 1 ;
+}
+.footer_img img{
+    height: 150px;
+    width: 300px;
+}
+.footer_categorias{
+    color: white;
+}
+li{
+    margin: 5px;
+    font-weight: bold;
+    font-size: 1em;
+}
+.temas{
+    color: white;
+}
+.acerca_de{
+    color: white;
+}
+.copyright{
+    background-color: white;
+}
+
+/* ----------- Responsive (Móviles - hasta 600px) ----------- */
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .primer_menu,
+    .menu,
+    .seccion2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .barra_de_busqueda {
+        width: 90%;
+        margin: 10px 0;
+        flex-direction: column;
+    }
+
+    .barra_de_busqueda input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border-right: 1px solid #ccc;
+    }
+
+    .barra_de_busqueda button {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .primer_div,
+    .categorias,
+    .bienvenida,
+    .Inicio {
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .Titulo {
+        font-size: 22px;
+    }
+
+    .subtitulo,
+    .bienvenida_text,
+    .Inicio_text,
+    .categorias_text {
+        font-size: 16px;
+    }
+
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .categorias {
+        display: none;
+    }
+    .Categorias {
+        min-height: 450px;
+        padding: 0 10px;
+    }
+
+    .slide-inner {
+        height: calc(350px + 2em);
+    }
+
+    .slide-control {
+        font-size: 28px;
+        height: 30px;
+        width: 30px;
+        line-height: 26px;
+    }
+
+    .slide-circulo {
+        font-size: 25px;
+    }
+
+    #titulo {
+        font-size: 20px;
+    }
+}
+
+/* ----------- Responsive (Tablets - hasta 1024px) ----------- */
+@media (max-width: 1024px) {
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .Categorias {
+        min-height: 600px;
+    }
+
+    .slide-inner {
+        height: calc(550px + 2em);
+    }
+
+    .slide-item img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .primer_div,
+    .bienvenida,
+    .Inicio {
+        width: 100%;
+        height: auto;
+    }
+
+    .categorias {
+        display: none;
+    }
+
+    .seccion2 {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .banner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+
