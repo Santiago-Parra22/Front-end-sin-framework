@@ -751,29 +751,6 @@ li{
     .categorias {
         display: none;
     }
-    .Categorias {
-        min-height: 450px;
-        padding: 0 10px;
-    }
-
-    .slide-inner {
-        height: calc(350px + 2em);
-    }
-
-    .slide-control {
-        font-size: 28px;
-        height: 30px;
-        width: 30px;
-        line-height: 26px;
-    }
-
-    .slide-circulo {
-        font-size: 25px;
-    }
-
-    #titulo {
-        font-size: 20px;
-    }
 }
 
 /* ----------- Responsive (Tablets - hasta 1024px) ----------- */
@@ -782,19 +759,6 @@ li{
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
-    }
-    .Categorias {
-        min-height: 600px;
-    }
-
-    .slide-inner {
-        height: calc(550px + 2em);
-    }
-
-    .slide-item img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
     }
 
     .primer_div,
@@ -816,7 +780,5 @@ li{
     .banner {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 40px;
     }
 }
-
