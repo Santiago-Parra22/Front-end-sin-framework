@@ -16,3 +16,18 @@ btn.addEventListener('click',()=>{
     document.documentElement.scrollTop = 0;
 })
 
+const observer = new IntersectionObserver((entries) =>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        }
+
+    });
+},{
+ threshold:0.3   
+});
+
+const sectionBrand = document.querySelector('.brand')
+if(sectionBrand){
+    observer.observe(sectionBrand)
+}
